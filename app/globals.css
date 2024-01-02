@@ -2,26 +2,96 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer components {
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  .activemenu {
+    @apply rounded-lg bg-bgdivght border border-sodivd border-pureblue
+  }
+  .fullscreen {
+    @apply fixed inset-0 w-full h-full z-[9999] bg-[#8080809c]
+  }
+
+  .placecenter {
+    @apply flex justify-center items-center
+  }
+
+  .maintext {
+    @apply text-darkblue text-base font-semibold
+  }
+
+  .secondarytext {
+    @apply text-[0.875rem] font-semibold text-darkblue
+  }
+
+  .paratext {
+    @apply text-[0.75rem] font-medium text-darkblue
+  }
+
+  .menutext {
+    @apply text-darkblue text-sm font-medium
+  }
+
+  .sidebar-items {
+    @apply p-[0.625rem] h-[3.125rem] flex gap-[0.625rem] items-center
+  }
+
+  .barbuttons {
+    @apply flex-1 placecenter menutext py-[0.62rem] border-b-2 border-solid
+  }
+
+  .break {
+    @apply border border-dotted my-[0.62rem]
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.activebar {
+  border-radius: 50% !important;
+  border: 1px solid #0073E6;
+  background-color: #F2F8FE !important;
+}
+
+.activebar path {
+  fill: #0073E6;
+}
+
+select {
+  -webkit-appearance: none; 
+  background: url("/selectarrow.svg") no-repeat right 0.94rem center;
+}
+
+select option {
+  background-color: #fff;
+  color: #1C4980;
+  border: 1px solid transparent;
+  border-color: #DADCE0;
+  cursor: pointer;
+}
+
+.side-in {
+  position: absolute;
+  animation: slidein 0.7s forwards;
+  left: -300px;
+}
+
+.side-out {
+  position: absolute;
+  animation: slideout 0.7s forwards;
+  left: 0;
+}
+
+@keyframes slidein {
+  100% { left: 0; }
+}
+
+@keyframes slideout {
+  100% { left: -300px; }
+}
+
+.filterslidein {
+  animation: filterin 0.5s forwards;
+  top: -300px;
+}
+
+@keyframes filterin {
+  100% { top: 0; }
 }
