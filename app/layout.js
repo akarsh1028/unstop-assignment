@@ -1,9 +1,14 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Navbar from './components/Navbar'
-import Modal from './components/assesment/Modal'
+import { lazy } from 'react';
 
+import dynamic from 'next/dynamic'
+ 
+const Navbar = dynamic(() => import('./components/Navbar'))
+
+// const Navbar = lazy(() => import ('./components/Navbar'));
 const inter = Inter({ subsets: ['latin'] })
+
 
 export const metadata = {
   title: 'Create Next App',
@@ -14,9 +19,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar/>
+        <section className="lg:hidden"><Navbar/></section>
         {children}
-        {/* <Modal/> */}
       </body>
     </html>
   )
