@@ -6,8 +6,7 @@ const Input = ({ type, label, value, onchange, placeholder}) => {
       <label className='paratext'>{label}</label>
       { type === "select" ?
         <select defaultValue="select" className='p-[0.94rem] placecenter paratext border border-solid border-bordergrey rounded-lg outline-none'>
-          <option value="select">Select</option>
-          <option value="job">Job</option>
+          <option value="select" disabled>Select</option>
         </select>
       :
         <input className='p-[0.94rem] placecenter paratext border border-solid border-bordergrey rounded-lg placeholder:text-blurdate outline-none' type={type} placeholder={placeholder ? placeholder : 'Type Here'} value={value} onChange={(e) => onchange(e.target.value)}/>

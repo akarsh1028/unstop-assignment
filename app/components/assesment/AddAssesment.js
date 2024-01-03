@@ -18,14 +18,6 @@ const AddAssesment = () => {
           <p className='text-center paratext'>From here you can add questions of multiple types like MCQs, subjective (text or paragraph)!</p>
         </div>
         <List />
-        <List />
-        <List />
-        <List />
-        <List />
-        <List />
-        <List />
-        <List />
-        <List />
       </div>
       {showModal && <Modal setShowModal={setShowModal}/>}
     </>

@@ -37,7 +37,7 @@
   }
 
   .barbuttons {
-    @apply flex-1 placecenter menutext py-[0.62rem] border-b-2 border-solid
+    @apply max-lg:flex-1 placecenter max-lg:menutext py-[0.62rem] lg:py-[1.5rem] border-b-2 border-solid lg:border-b-[3px] lg:text-[0.875rem] lg:font-semibold
   }
 
   .break {
@@ -45,7 +45,7 @@
   }
 
   .card {
-    @apply max-w-sm w-1/3 min-w-[23rem]
+    @apply max-w-[24.25rem] w-1/3 min-w-[23rem]
   }
 }
 
@@ -64,39 +64,28 @@ select {
   background: url("/selectarrow.svg") no-repeat right 0.94rem center;
 }
 
-select option {
-  background-color: #fff;
-  color: #1C4980;
-  border: 1px solid transparent;
-  border-color: #DADCE0;
-  cursor: pointer;
-}
-
-.side-in {
-  position: absolute;
-  animation: slidein 0.7s forwards;
-  left: -300px;
-}
-
-.side-out {
-  position: absolute;
-  animation: slideout 0.7s forwards;
-  left: 0;
-}
-
-@keyframes slidein {
-  100% { left: 0; }
-}
-
-@keyframes slideout {
-  100% { left: -300px; }
-}
-
-.filterslidein {
-  animation: filterin 0.5s forwards;
-  top: -300px;
-}
-
-@keyframes filterin {
-  100% { top: 0; }
+@media (max-width:1280px) {
+  .side-in {
+    position: absolute;
+    animation: slidein 0.7s forwards;
+    left: -300px; 
+  }
+  @keyframes slidein {
+    100% { left: 0; }
+  }
+  .side-out { 
+    position: absolute;
+    animation: slideout 0.7s forwards;
+    left: 0;
+  }
+  @keyframes slideout {
+    100% { left: -300px; }
+  }
+  .filterslidein {
+    animation: filterin 0.5s forwards;
+    top: -300px;
+  }
+  @keyframes filterin {
+    100% { top: 0; }
+  }
 }

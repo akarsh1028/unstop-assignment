@@ -4,16 +4,18 @@ import React, { useState } from 'react'
 import { menuItems } from '../context/values'
 
 const Sidebar = ({ setSidebar }) => {
+
   const [animate, setAnimate] = useState(true);
+
   const closeSidebar = () => {
     setAnimate(false);
     setTimeout(() => {
       setSidebar(false)
-    },500)
+    },700)
   }
   return (
     <section className='max-lg:fullscreen '>
-      <div className={`flex flex-col lg:items-center lg:bg-white bg-verylightblue px-5 py-10 lg:px-7 lg:py-4 w-4/5 lg:w-full h-full max-lg:${animate ? 'side-in' : 'side-out'}`}>
+      <div className={`flex flex-col lg:items-center lg:bg-white bg-verylightblue px-5 py-10 lg:px-7 lg:py-4 w-4/5 lg:w-full h-full ${animate ? 'side-in' : 'side-out'}`}>
         {/* Sidebar heading */}
         <div className='flex align-top justify-between w-full h-10 lg:hidden'>
           <div className='menutext'>Menu</div>
