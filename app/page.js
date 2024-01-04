@@ -5,7 +5,9 @@ import Topbar from "./components/home/Topbar";
 export default function Home() {
   return (
     <main className="flex xl:gap-4 xl:max-w-[1440px] xl:m-auto">
+      {/* Sidebar in desktop view */}
       <div className="max-xl:hidden bg-white sticky top-0 h-screen"><Sidebar/></div>
+      {/* Main content */}
       <div className="w-full xl:bg-white xl:rounded-xl">
         <Topbar/>
         <MyAssessment/>

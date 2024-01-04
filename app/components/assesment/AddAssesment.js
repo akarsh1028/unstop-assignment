@@ -19,10 +19,12 @@ const AddAssesment = () => {
           </div>
           <p className='text-center paratext'>From here you can add questions of multiple types like MCQs, subjective (text or paragraph)!</p>
         </div>
+        {/* Mapping all assignments */}
         {list.map((item, index) => (
           <List name={item.name} key={index}/>
         ))}
       </div>
+      {/* Add new assignment modal */}
       {showModal && <Modal setShowModal={setShowModal} list={list} setList={setList}/>}
     </>
   )

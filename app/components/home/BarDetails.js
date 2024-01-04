@@ -17,13 +17,13 @@ const BarDetails = () => {
         <OverviewOne name="Total Purpose" src="/link2.svg" count="11" border/>
       </div>
       {/* Total Assesment and Purspose End */}
-      {/* Condidates Start */}
+      {/* Candidates Start */}
       <div className='xl:hidden'>
         {candidate.map((item) => (
           <OverviewTwo key={item.name} name={item.name} data={item.data}/>
         ))}
       </div>
-      {/* Condidates End */}
+      {/* Candidates End */}
     </div>
   )
 }

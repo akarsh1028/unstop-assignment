@@ -13,6 +13,7 @@ const Modal = ({setShowModal, list, setList}) => {
   const [animate, setAnimate] = useState(true);
 
   const closeModal = () => {
+    // closing modal with animation
     setAnimate(false);
     setTimeout(() => {
       setShowModal(false)
@@ -20,6 +21,7 @@ const Modal = ({setShowModal, list, setList}) => {
   }
 
   const addAssesment = () => {
+    // add new assignment in the list
     let obj = { name: name.value ? name.value : "Math Assesment" };
     const newList = list;
     newList.push(obj);

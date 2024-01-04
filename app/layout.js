@@ -19,6 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        {/* Navbar added for mobile view */}
         <section className="xl:hidden"><Navbar/></section>
         {children}
       </body>
