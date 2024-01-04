@@ -46,4 +46,20 @@ const candidate = [
   },
 ]
 
-export { menuItems, candidate };
+const skills = [
+  "UI/UX and Design", "No of Question", "Web Development", "UI/UX and Design", "Web Development"
+]
+
+const assesmentList = [
+  {
+    name: "Math Assessment",
+  },
+  {
+    name: "Math Assessment",
+  },
+  {
+    name: "Math Assessment",
+  }
+]
+
+export { menuItems, candidate, skills, assesmentList };

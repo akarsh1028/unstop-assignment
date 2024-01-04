@@ -91,4 +91,26 @@ select {
   @keyframes filterin {
     100% { top: 0; }
   }
+  .filterslideout {
+    animation: filterout 0.2s forwards;
+    top: 300px;
+  }
+  @keyframes filterout {
+    100% { top: 0; }
+  }
+}
+
+.modalin {
+  animation: slideup 0.5s forwards;
+  bottom: -600px; 
+}
+@keyframes slideup {
+  100% { bottom: 0; }
+}
+.modalout {
+  animation: slidedown 0.5s forwards;
+  bottom: 0;
+}
+@keyframes slidedown {
+  100% { bottom: -600px; }
 }

@@ -2,8 +2,8 @@ import Image from 'next/image'
 
 const Filters = ({ setShow, show }) => {
   return (
-    <div className='flex justify-between items-center'>
-      <div className='maintext'>My Assessment</div>
+    <div className='flex justify-between items-center xl:h-10'>
+      <div className='text-darkblue text-base font-semibold xl:text-[1.125rem] lg:font-medium'>My Assessment</div>
       <div className='flex gap-1 xl:hidden'>
         <div className='w-10 h-10 p-1 rounded-[3.125rem] bg-white placecenter'>
           <Image src="/filters/search.svg" alt='search' width={22} height={22} />

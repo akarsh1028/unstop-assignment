@@ -1,14 +1,14 @@
 import Image from 'next/image'
 import React from 'react'
 
-const List = () => {
+const List = ({name}) => {
   return (
     <div className='p-[0.88rem] border border-solid border-bordergrey rounded-xl xl:p-4 xl:card'>
       <div className='flex justify-between'>
         <div className='flex max-xl:items-center gap-[0.62rem] xl:flex-col'>
           <Image src="/job.svg" alt='job' width={50} height={50} />
           <div className='flex flex-col'>
-            <div className='secondarytext'>Math Assessment</div>
+            <div className='secondarytext'>{name}</div>
             <div className="flex items-center">
               <div className="paratext">Job</div>
               <div className='border-r border-bordergrey h-full m-[0.31rem] xl:m-[0.62rem]' />

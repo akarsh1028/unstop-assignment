@@ -4,9 +4,11 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import List from './List'
 import Modal from './Modal'
+import { assesmentList } from '@/app/context/values'
 
 const AddAssesment = () => {
   const [showModal, setShowModal] = useState(false);
+  const [list, setList] = useState(assesmentList);
   return (
     <>
       <div className='flex flex-col gap-[0.94rem] xl:gap-7 xl:flex-wrap xl:flex-row'>
@@ -17,9 +19,11 @@ const AddAssesment = () => {
           </div>
           <p className='text-center paratext'>From here you can add questions of multiple types like MCQs, subjective (text or paragraph)!</p>
         </div>
-        <List />
+        {list.map((item, index) => (
+          <List name={item.name} key={index}/>
+        ))}
       </div>
-      {showModal && <Modal setShowModal={setShowModal}/>}
+      {showModal && <Modal setShowModal={setShowModal} list={list} setList={setList}/>}
     </>
   )
 }
