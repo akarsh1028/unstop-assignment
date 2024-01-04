@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <section className="lg:hidden"><Navbar/></section>
+        <section className="xl:hidden"><Navbar/></section>
         {children}
       </body>
     </html>

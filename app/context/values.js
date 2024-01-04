@@ -13,4 +13,37 @@ const menuItems = [
   }
 ]
 
-export { menuItems };
+const candidate = [
+  {
+    name: "Candidates",
+    data: [
+      {
+        count: "11,145",
+        name: "Total Candidate",
+      },
+      {
+        count: "1,14",
+        name: "Who Attamped",
+      }
+    ],
+  },
+  {
+    name: "Candidates Source",
+    data: [
+      {
+        count: "11,000",
+        name: "E-mail",
+      },
+      {
+        count: "11,000",
+        name: "Social Share",
+      },
+      {
+        count: "11,000",
+        name: "Unique Link",
+      }
+    ],
+  },
+]
+
+export { menuItems, candidate };

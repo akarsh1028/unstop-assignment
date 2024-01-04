@@ -4,7 +4,7 @@ const Filters = ({ setShow, show }) => {
   return (
     <div className='flex justify-between items-center'>
       <div className='maintext'>My Assessment</div>
-      <div className='flex gap-1 lg:hidden'>
+      <div className='flex gap-1 xl:hidden'>
         <div className='w-10 h-10 p-1 rounded-[3.125rem] bg-white placecenter'>
           <Image src="/filters/search.svg" alt='search' width={22} height={22} />
         </div>

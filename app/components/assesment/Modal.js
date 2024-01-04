@@ -11,7 +11,7 @@ const Modal = ({setShowModal}) => {
   const [name, setName] = useState("");
   return (
     <div className='fullscreen'>
-      <div className='bg-white max-lg:bottom-0 lg:w-[36.94rem] absolute w-full h-[90%] rounded-tl-xl rounded-tr-xl lg:rounded-lg overflow-hidden'>
+      <div className='bg-white max-xl:bottom-0 xl:w-[36.94rem] absolute w-full h-[90%] rounded-tl-xl rounded-tr-xl xl:rounded-lg overflow-hidden'>
         <div className='absolute top-0 bg-white w-full flex h-[3.75rem] justify-between items-center px-[0.94rem] border-b border-solid border-bordergrey'>
           <div className='secondarytext'>Create new assessment</div>
           <div className='bg-bgorange placecenter w-10 h-10 rounded-full cursor-pointer' onClick={() => setShowModal(false)}><Image alt="close" src="/close.svg" width={30} height={30}/></div>

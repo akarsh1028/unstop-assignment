@@ -4,9 +4,9 @@ import Topbar from "./components/home/Topbar";
 
 export default function Home() {
   return (
-    <main className="flex lg:bg-whiteblue lg:gap-4 lg:max-w-[1440px] lg:m-auto">
-      <div className="max-lg:hidden bg-white sticky top-0 h-screen"><Sidebar/></div>
-      <div className="w-full lg:w-[79rem] lg:bg-white lg:rounded-xl">
+    <main className="flex xl:gap-4 xl:max-w-[1440px] xl:m-auto">
+      <div className="max-xl:hidden bg-white sticky top-0 h-screen"><Sidebar/></div>
+      <div className="w-full xl:bg-white xl:rounded-xl">
         <Topbar/>
         <MyAssessment/>
       </div>
